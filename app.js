@@ -9,7 +9,7 @@ var device = require('express-device');
 require('./modules/authentication-verifier');
 
 var indexRouter = require('./routes/index');
-var productRouter = require('./routes/product');
+var IngredientRouter = require('./routes/Ingredient');
 var categoryRouter = require('./routes/category');
 var userRouter = require('./routes/user');
 var fileRouter = require('./routes/file');
@@ -26,7 +26,7 @@ app.use(device.capture({parseUserAgent: true}));
 app.use(sessionVerifier.restoreSessionFix);
 app.use(allRouter);
 app.use('/', indexRouter);
-app.use('/product', productRouter);
+app.use('/Ingredient', IngredientRouter);
 app.use('/user', userRouter);
 app.use('/category', categoryRouter);
 app.use('/file', fileRouter);
