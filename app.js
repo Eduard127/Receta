@@ -14,6 +14,7 @@ var categoryRouter = require('./routes/category');
 var userRouter = require('./routes/user');
 var fileRouter = require('./routes/file');
 var allRouter = require('./routes/all');
+var RecipeRouter = require('./routes/Recipe');
 var app = express();
 
 app.use(logger('dev'));
@@ -30,6 +31,7 @@ app.use('/Ingredient', IngredientRouter);
 app.use('/user', userRouter);
 app.use('/category', categoryRouter);
 app.use('/file', fileRouter);
+app.use('/Recipe', RecipeRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
