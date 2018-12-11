@@ -18,7 +18,7 @@
     "passport-http-bearer": "^1.0.1",
     "randomstring": "^1.1.5",
     "sequelize": "^4.41.0",
-    "sharp": "^0.21.0"
+    "sharp": "^0.21.1"
   },
   "devDependencies": {
     "frisby": "^2.1.0",

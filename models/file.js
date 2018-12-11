@@ -36,7 +36,5 @@ module.exports = (sequelize, DataTypes) => {
             underscored: false
         });
 
-
-
     return File;
 };

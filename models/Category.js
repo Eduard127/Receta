@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
         nombre: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        descripcion: {
+            type: DataTypes.TEXT,
+            allowNull: false,
         }
     }, {
             // don't add the timestamp attributes (updatedAt, createdAt)
@@ -40,7 +44,8 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'category'
         });
 
-        Category.hasOne(models.File, {
+        Category.belongsTo(models.File, {
+            as: 'Photo',
             foreignKey: 'photo'
         });
     };

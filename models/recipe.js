@@ -12,11 +12,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        ingredientes: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-        },
-        description: {
+        preparacion: {
             type: DataTypes.TEXT,
             allowNull: false,
         }
@@ -44,10 +40,12 @@ module.exports = (sequelize, DataTypes) => {
 
     Recipe.associate = models => {
         Recipe.belongsTo(models.Category, {
+            as: 'Category',
             foreignKey: 'category'
         });
 
         Recipe.belongsTo(models.File, {
+            as: 'Photo',
             foreignKey: 'photo'
         });
 
