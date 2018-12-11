@@ -15,8 +15,7 @@ router.get('/:id', (req, res, next) => {
 router.post('/save', (req, res, next) => {
   object.save([
     'nombre',
-    'ingredientes',
-    'description'
+    'preparacion'
   ], req.query, 'Recipe')
     .then(response => {
       res.json({ status: true, content: response });
@@ -31,8 +30,7 @@ router.put('/save/:id', (req, res, next) => {
   values.id = req.params.id;
   object.update([
     'nombre',
-    'ingredientes',
-    'description'
+    'preparacion'
   ], values, 'Recipe')
     .then(response => {
       res.json({ status: true, content: response });
